@@ -1,4 +1,12 @@
-# 📚 TrendFurnace Blog (Jekyll + GitHub Pages)
+# 🔥 TrendFurnace Blog (Jekyll + GitHub Pages)
+
+[![GitHub Pages](https://img.shields.io/badge/Live%20Site-View-green?style=flat&logo=github)](https://monsieur-nico.github.io/trendfurnace-blog/)
+[![Last Commit](https://img.shields.io/github/last-commit/Monsieur-Nico/trendfurnace-blog)](https://github.com/Monsieur-Nico/trendfurnace-blog)
+[![Made with Jekyll](https://img.shields.io/badge/Built%20with-Jekyll-blueviolet?logo=jekyll)](https://jekyllrb.com)
+[![Content](https://img.shields.io/badge/Content-AI%20Generated%20%2B%20Human%20Verified-blue)](#)
+📄 License: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+---
 
 This is your fully automated, real-content publishing blog using Jekyll and GitHub Pages.
 
@@ -12,55 +20,12 @@ This is your fully automated, real-content publishing blog using Jekyll and GitH
 
 ## 🛠 Setup Instructions
 
-### 1. Clone this Repo
-
-```bash
-git clone https://github.com/YOUR-USERNAME/trendfurnace-blog.git
-cd trendfurnace-blog
-```
-
-### 2. Add a Blog Post
-
-- Save your Markdown file as `_posts/YYYY-MM-DD-title-of-post.md`
-- Example:
-
-```markdown
----
-title: 'NBA Playoffs 2025'
-date: 2025-04-21
----
-
-The NBA Playoffs are heating up...
-```
-
-### 3. Push Your Content
-
-```bash
-git add .
-git commit -m "Add blog post"
-git push
-```
-
-### 4. Enable GitHub Pages
-
-- Go to the repo → Settings → Pages
-- Source: `main` branch
-- Folder: `/ (root)`
-- Save → Your blog will be live at:
-
-```
-https://your-username.github.io/trendfurnace-blog/
-```
+1. **Clone this Repo**
+2. **Run locally with Jekyll** _(optional)_
+3. **Push changes** to auto-deploy via GitHub Pages
 
 ---
 
-## 💡 Notes
+Stay tuned — new posts drop every day. This project is built entirely on automation + integrity.
 
-- Your homepage is `index.md`
-- Blog layout lives in `_layouts/post.html`
-- Site config is in `_config.yml`
-- `.nojekyll` prevents GitHub from blocking Jekyll processing
-
----
-
-Built for speed, simplicity, and monetization 🔥
+&copy; 2025 TrendFurnace
