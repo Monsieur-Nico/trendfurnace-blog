@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore any backup files or local drafts
+*.bak
+*.tmp
+*.swp
+
+# Optional: ignore any local build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+
+# Node/npm files
+node_modules/
