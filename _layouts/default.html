@@ -1,24 +1,52 @@
+<!-- _layouts/default.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | TrendFurnace</title>
+  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico" type="image/x-icon">
+  <meta name="description"
+    content="TrendFurnace delivers accurate, AI-powered summaries of trending topics across sports, tech, culture, and more—updated daily.">
+  <meta name="keywords"
+    content="trending topics, AI blog, google trends, news summaries, daily blog, SEO blog, tech, sports, content automation">
+  <meta name="author" content="Nicolas from TrendFurnace">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 
 <body>
   <header>
-    <h1><a href="{{ '/' | relative_url }}" style="color: white; text-decoration: none;">TrendFurnace Blog</a></h1>
-    <p>Real-world trending content, generated daily</p>
+    <a href="{{ site.baseurl }}/" class="logo">
+      <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="TrendFurnace Logo" width="32" height="32">
+      <span>TrendFurnace</span>
+    </a>
+    <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
   </header>
+
   <main>
     {{ content }}
   </main>
+
   <footer>
-    &copy; 2025 TrendFurnace — Built with Jekyll and AI.
+    &copy; 2025 TrendFurnace — Real content, daily.<br>
+    Powered by AI-assisted writing and reviewed for accuracy.
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme on visit
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
 </body>
 
 </html>
