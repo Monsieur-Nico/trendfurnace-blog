@@ -16,38 +16,14 @@
 </head>
 
 <body>
-  <header>
-    <a href="{{ site.baseurl }}/" class="logo">
-      <img src="{{ site.baseurl }}/assets/images/logo.png" alt="TrendFurnace Logo" width="40" height="40"
-        style="vertical-align: middle; margin-right: 0.4rem;">
-      <span>TrendFurnace</span>
-    </a>
-    <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
-  </header>
+  {% include header.html %}
 
   <main>
     {{ content }}
   </main>
 
-  <footer>
-    &copy; 2025 TrendFurnace — Real content, daily.<br>
-    Powered by AI-assisted writing and reviewed for accuracy.
-  </footer>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-
-    // Load saved theme on visit
-    (function() {
-      const saved = localStorage.getItem('theme');
-      if (saved) document.documentElement.setAttribute('data-theme', saved);
-    })();
-  </script>
+  {% include footer.html %}
+  {% include darkmode-toggle.html %}
 </body>
 
 </html>
