@@ -1,5 +1,14 @@
 name: TrendFurnace
 description: Real-world trending content, generated daily.
 baseurl: ''
-url: 'https://your-username.github.io'
-theme: minima
+url: 'https://monsieur-nico.github.io/trendfurnace-blog'
+
+# Remove or comment out this line:
+# theme: minima
+
+defaults:
+  - scope:
+      path: '_posts'
+      type: 'posts'
+    values:
+      layout: post
