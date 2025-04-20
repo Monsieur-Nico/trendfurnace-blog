@@ -19,8 +19,30 @@
 <body>
   {% include header.html %}
 
-  <main>
-    {{ content }}
+  <main class="container">
+    <section class="intro-card">
+      <h2>Welcome to TrendFurnace 🔥</h2>
+      <p>Your daily source of AI-powered, fact-checked trend summaries from Canada and the world.</p>
+      <ul class="intro-highlights">
+        <li>✅ Written using intelligent summarization</li>
+        <li>🔍 Verified for factual accuracy</li>
+        <li>🕓 Published within hours of trends emerging</li>
+      </ul>
+    </section>
+
+    <section class="latest-posts">
+      <h2>📈 Latest Trends</h2>
+      <div class="posts-grid">
+        {% for post in site.posts limit:6 %}
+        <article class="post-card">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
+          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          <a class="read-more" href="{{ post.url }}">Read more →</a>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
   </main>
 
   {% include footer.html %}
