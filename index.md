@@ -23,7 +23,7 @@ _You can click any title to read the full article._
 
 {% for post in site.posts %}
 
-- [{{ post.title }}]({{ post.url }})
+- [{{ post.title }}]({{ post.url | relative_url }})
   {% endfor %}
 
 ---
