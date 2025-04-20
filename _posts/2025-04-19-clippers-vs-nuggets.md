@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Clippers vs. Nuggets — April 2025 Rivalry Recap & Playoff Outlook'
 date: 2025-04-19
 tags: [trending, nba, basketball]

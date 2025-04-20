@@ -21,6 +21,11 @@ Below are the latest posts from our daily content engine:
 
 _You can click any title to read the full article._
 
+{% for post in site.posts %}
+
+- [{{ post.title }}]({{ post.url }})
+  {% endfor %}
+
 ---
 
 Stay tuned — new posts drop every day. This project is built entirely on automation + integrity.
