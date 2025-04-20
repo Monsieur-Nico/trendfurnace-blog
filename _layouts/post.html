@@ -1,77 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | TrendFurnace</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #111;
-      color: #fff;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    main {
-      max-width: 740px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: #111;
-    }
-
-    footer {
-      text-align: center;
-      color: #888;
-      font-size: 0.9rem;
-      margin: 3rem 0;
-    }
-
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>TrendFurnace</h1>
-    <p>Real-world trending content, generated daily</p>
+    <a href="{{ site.baseurl }}/" class="logo">
+      <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="TrendFurnace Logo" width="32" height="32">
+      <span>TrendFurnace</span>
+    </a>
+    <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
   </header>
+
   <main>
-    <h1>{{ page.title }}</h1>
-    <p><em>{{ page.date | date: "%B %-d, %Y" }}</em></p>
-    {{ content }}
+    <article class="post">
+      <h1>{{ page.title }}</h1>
+      <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
+      {{ content }}
+      {% if page.tags %}
+      <p><strong>Tags:</strong>
+        {% for tag in page.tags %}
+        <span class="tag">#{{ tag }}</span>
+        {% endfor %}
+      </p>
+      {% endif %}
+    </article>
   </main>
+
   <footer>
-    © 2025 TrendFurnace — Powered by AI and Markdown.
+    &copy; 2025 TrendFurnace — Real content, daily.<br>
+    Powered by AI-assisted writing and reviewed for accuracy.
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme on visit
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
 </body>
 
 </html>
