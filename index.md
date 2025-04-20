@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TrendFurnace Blog
+title: Home
 ---
 
 # 🔥 TrendFurnace Blog
