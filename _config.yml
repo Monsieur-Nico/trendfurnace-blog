@@ -1,0 +1,5 @@
+name: TrendFurnace
+description: Real-world trending content, generated daily.
+baseurl: ''
+url: 'https://your-username.github.io'
+theme: minima

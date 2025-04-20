@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | TrendFurnace</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    main {
+      max-width: 740px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #111;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      margin: 3rem 0;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>TrendFurnace</h1>
+    <p>Real-world trending content, generated daily</p>
+  </header>
+  <main>
+    <h1>{{ page.title }}</h1>
+    <p><em>{{ page.date | date: "%B %-d, %Y" }}</em></p>
+    {{ content }}
+  </main>
+  <footer>
+    © 2025 TrendFurnace — Powered by AI and Markdown.
+  </footer>
+</body>
+
+</html>
