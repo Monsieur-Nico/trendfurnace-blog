@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | TrendFurnace</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}" style="color: white; text-decoration: none;">TrendFurnace Blog</a></h1>
+    <p>Real-world trending content, generated daily</p>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    &copy; 2025 TrendFurnace — Built with Jekyll and AI.
+  </footer>
+</body>
+
+</html>
