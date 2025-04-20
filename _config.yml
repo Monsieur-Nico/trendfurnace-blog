@@ -1,6 +1,6 @@
 name: TrendFurnace
 description: Real-world trending content, generated daily.
-baseurl: ''
+baseurl: 'baseurl: '/trendfurnace-blog'
 url: 'https://monsieur-nico.github.io/trendfurnace-blog'
 
 # Remove or comment out this line:
