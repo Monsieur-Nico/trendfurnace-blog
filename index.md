@@ -3,31 +3,33 @@ layout: default
 title: TrendFurnace Blog
 ---
 
-Welcome to **TrendFurnace** — where trending topics meet trustworthy AI-powered content.
+# 🔥 TrendFurnace Blog
 
-Every day, we publish concise and factual blog posts based on what's trending in Canada and around the world.
+Welcome to **TrendFurnace** — your daily source of AI-powered, fact-checked breakdowns of what's trending across the web.
 
-Each article is:
+Every post is:
 
-- 🧠 100% real — no fiction or speculation
-- 🔍 Verified against current events
-- 🛍 Monetized with short, relevant affiliate suggestions
+- 🧠 Written using intelligent summarization
+- ✅ Verified to ensure factual accuracy
+- 🚀 Published within hours of the trend emerging
 
 ---
 
-## 📌 Recent Posts
+## 📌 Latest Trends
 
-Below are the latest posts from our daily content engine:
-
-_You can click any title to read the full article._
-
-{% for post in site.posts %}
-
-- [{{ post.title }}]({{ post.url | relative_url }})
+<div class="post-list">
+  {% for post in site.posts %}
+  <div class="post-card">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p><em>{{ post.date | date: "%B %d, %Y" }}</em></p>
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    <p><a href="{{ post.url | relative_url }}">Read more →</a></p>
+  </div>
   {% endfor %}
+</div>
 
 ---
 
 Stay tuned — new posts drop every day. This project is built entirely on automation + integrity.
 
-© 2025 TrendFurnace
+Want to suggest a topic or collaborate? Reach out anytime!
